@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Switch</title>
+    <style>
+        *{
+            background-color: black;
+            
+        }
+        .bulbOff{
+            margin-top: 100px;
+            margin-left: 579px;
+        }
+        button{
+            width: 80px;
+            height: 40px;
+            background-color: rgb(226, 161, 21);
+            margin-left: 660px;
+        }
+
+        @media only screen and (max-width: 600px)
+        {
+            .bulbOff{
+                width: 402px;
+                margin-left: 7px;
+                margin-right: 19px;
+            }
+            button{
+                margin: 20px;
+                width: 156px;
+                height: 60px;
+                background-color: rgb(226, 223, 21);
+                margin-left: 131px;
+                font-size: 30px;
+                }                       
+        }
+    </style>
+</head>
+<body>
+    <img src="BulbOff.png" width="250px" class="bulbOff" id="bulb"> <br>
+    <button id="lightSwitch">Turn On</button>
+
+    <script>
+        let btn = document.getElementById('lightSwitch')
+        let bulb = document.getElementById('bulb')
+        document.addEventListener('click',lightBulb)
+
+        function lightBulb(e){
+            if(btn.textContent.includes('On'))
+            {
+                bulb.src = "BulbOn.png"
+                btn.textContent = "Turn Off"             
+            }
+            else
+            {
+                bulb.src = "BulbOff.png"
+                btn.textContent = "Turn On"                
+            }
+        }
+    </script>
+</body>
+</html>
