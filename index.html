@@ -5,49 +5,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Light Switch</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
+
     <style>
         *{
             background-color: black;
             
         }
-        .bulbOff{
-            margin-top: 100px;
-            margin-left: 579px;
+        .img{
+            display: block;
+            text-align: center;
         }
         button{
-            width: 80px;
+            width: 100px;
             height: 40px;
+            font-size: 20px;
             background-color: rgb(226, 161, 21);
-            margin-left: 660px;
+        }
+        .text{
+            color: rgb(212, 29, 29);
+            text-align: center;
+            font-weight: bold;
+            font-size: 45px;
+            font-family: 'Syne Mono', monospace;
         }
 
         @media only screen and (max-width: 600px)
         {
             *{
-                padding: 20px;
                 box-sizing: border-box;
                 flex-basis: 100%;               
             }
             .bulbOff{
-                width: 265px;
-                margin-left: 7px;
-                margin-right: 19px;
+                width: 300px;
+                margin-top: 50px;
             }
             button{
                 margin: 20px;
                 width: 156px;
                 height: 60px;
                 background-color: rgb(226, 223, 21);
-                margin-left: 61px;
                 font-size: 20px;
                 color: black;
-                }                       
+                } 
+            .text{
+                margin-top: 90px;
+                font-family: 'Comforter Brush', cursive;
+            }  
+            .text i{
+                    color: white;
+            }                    
         }
     </style>
 </head>
 <body>
-    <img src="BulbOff.png" width="250px" class="bulbOff" id="bulb"> <br>
-    <button id="lightSwitch">Turn On</button>
+    <h1 class="text">Light Switch <i class="fa fa-lightbulb-o" aria-hidden="true"></i></h1>
+    <div class="img">
+        <img src="BulbOff.png" width="250px" class="bulbOff" id="bulb">      
+        <br> 
+        <button id="lightSwitch">Turn On</button>
+    </div>
 
     <script>
         let btn = document.getElementById('lightSwitch')
